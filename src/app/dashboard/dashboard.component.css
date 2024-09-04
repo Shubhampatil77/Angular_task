@@ -1,0 +1,54 @@
+.container {
+    height: calc(100% - 100px - 50px);
+    text-align: center;
+    overflow-x: auto;
+}
+
+.container h1 {
+    padding-top: 20px;
+}
+
+.container .fab-button {
+    position: fixed;
+    top: 110px;
+    left: 10px;
+}
+
+.container mat-icon {
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    margin: 0px auto;
+}
+
+th.mat-header-cell {
+    text-align: center;
+}
+  
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.edit-icon {
+    margin-left: 20px;
+}
+
+  
+  .mat-form-field {
+    width: 60%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-bottom: 20px;
+    font-size: 18px; /* Increase font size */
+    padding: 12px 24px; /* Increase padding for bigger button */
+    min-width: 150px; /* Minimum width for the button */
+  
+  }
+  
+
+  

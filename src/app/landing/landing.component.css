@@ -1,0 +1,34 @@
+
+.container {
+    height: calc(100% - 100px - 50px);
+    display: flex;
+}
+
+.container img {
+    width: auto;
+}
+
+.container .info {
+    width: 100%;
+    text-align: center;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    text-align: center; /* Center the text within the div, optional */
+  }
+  
+  .info h1 {
+    color: #21c7e9; /* Change the color of the h1 text */
+    font-size: 2.5em; /* Change the font size of the h1 text */
+  }
+  
+  .info p {
+    color: #0f4bd9; /* Change the color of the paragraph text */
+    font-size: 1.5em; /* Change the font size of the paragraph text */
+  }
+  

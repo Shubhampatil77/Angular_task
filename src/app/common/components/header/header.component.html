@@ -1,0 +1,11 @@
+<header>
+
+    <h2>Online Pharmacy Home</h2> 
+  
+    <div class="nav">
+      <button mat-raised-button color="accent" [routerLink]="['/login']" *ngIf="isLoginBtn" class="large-button">Login</button>
+  
+      <button mat-raised-button color="warn" (click)="logout()" *ngIf="isLogoutBtn" class="large-button">Logout</button>
+    </div>
+  </header>
+  

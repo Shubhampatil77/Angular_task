@@ -1,0 +1,58 @@
+.container {
+  height: calc(100% - 100px - 50px);
+  display: flex;
+  justify-content: space-between; /* Space between the image and the form */
+  align-items: center; /* Align items vertically center */
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-container img {
+  max-width: 100%;
+  padding-left: 50%;
+  height: 60%;
+}
+
+.container .box {
+  display: flex;
+  flex-direction: column;
+  border: 0px solid #07f213f5; /* Thicker border for better visibility */
+  padding: 40px; /* Increase padding for a larger form */
+  border-radius: 10px;
+  background-color: #ffffff; /* Add background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  width: 100%;
+  height: 300px;
+  max-width: 600px; /* Limit the width for better aesthetics */
+  align-items: flex-start;
+  margin-right: 200px; /* Align items within the box to the left */
+}
+
+.container .box h1 {
+  align-self: flex-start; /* Ensure the header is left-aligned */
+}
+
+.container .box mat-form-field {
+  margin-bottom: 10px;
+  width: 100%; /* Ensure the fields take full width for better alignment */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+.large-button {
+  font-size: 18px; /* Increase font size */
+  padding: 10px 20px; /* Increase padding for bigger button */
+  min-width: 150px; /* Minimum width for the button */
+}

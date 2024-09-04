@@ -1,0 +1,102 @@
+<app-header [isLogoutBtn]="true"></app-header>
+<br>
+<button mat-raised-button color="primary" (click)="Back()">Go To Dashboard</button>
+
+<!-- Cart Container -->
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <table mat-table [dataSource]="cartItems" class="mat-elevation-z8">
+      <!-- Medicine Name Column -->
+      <ng-container matColumnDef="medicine_name">
+        <mat-header-cell *matHeaderCellDef> Medicine Name </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{ item.medicine_name }} </mat-cell>
+      </ng-container>
+
+      <!-- Quantity Column -->
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{ item.quantity }} </mat-cell>
+      </ng-container>
+
+      <!-- Price Column -->
+      <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{ item.price }} </mat-cell>
+      </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+        <mat-cell *matCellDef="let item">
+          <button mat-raised-button color="warn" (click)="removeItem(item)">Remove</button>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Header and Row Declarations -->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </table>
+
+    <button mat-raised-button color="primary" (click)="checkout()">Proceed to Checkout</button>
+  </div>
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</div>
+
+<div class="container mat-typography">
+  <div class="table">
+
+  <!-- Available Medicines -->
+  <div>
+    <h3 mat-subheader>Available Medicines</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let medicine of availableMedicines">
+        <strong style="font-size: large;">{{ medicine.medicine_name }} - {{ medicine.price | currency }}</strong>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <!-- Unavailable Medicines -->
+  <div>
+    <h3 mat-subheader>Unavailable Medicines</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let medicine of unavailableMedicines">
+        <strong>{{ medicine.medicine_name }} - {{ medicine.price | currency }}</strong>
+      </mat-list-item>
+    </mat-list>
+  </div>
+<!-- Alternative Medicines -->
+<div>
+  <h3 mat-subheader>Alternative Medicines</h3>
+  <ul>
+    <li *ngFor="let alternative of alternativeMedicines">
+      {{ alternative.medicine_name }} - {{ alternative.price }}
+      <button mat-raised-button color="primary"
+        (click)="replaceWithAlternative(unavailableMedicines[0], alternative)">
+        Replace Unavailable Medicine
+      </button>
+    </li>
+  </ul>
+</div>
+</div>
+
+  
+  <button mat-raised-button color="primary" aria-label="Place Order" (click)="openDialog()">
+    Place Order
+  </button>
+  
+  
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="Bottom">
+
+<app-footer></app-footer>
+
+</div>

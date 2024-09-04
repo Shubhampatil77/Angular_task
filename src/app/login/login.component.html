@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="image-container">
+        <img src="../../assets/dash.jpg" alt="Image">
+    </div>
+    <div class="box" [formGroup]="loginForm">
+        <h1><strong>Login</strong></h1>
+        <mat-form-field>
+            <mat-label>Mobile Number</mat-label>
+            <input matInput type="number" formControlName="mobileNumber">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+    
+        <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="login()" class="large-button">Login</button>
+    </div>
+</div>
+
+<app-footer></app-footer>

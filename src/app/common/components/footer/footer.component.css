@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+  }
+  
+  main {
+    flex: 1; /* Pushes the footer to the bottom if content is short */
+  }
+  
+  footer {
+    background-color: #2e08ec;
+    color: #FFF;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+    font-size: 25px; /* Increase font size */
+    margin-top: auto; /* Pushes footer to the bottom */
+  }
+  

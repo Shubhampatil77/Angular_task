@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+* { margin: 0; padding: 0; }
+html, body { height: 100%; width: 100%; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.large-button {
+    font-size: 18px; /* Increase font size */
+    padding: 12px 24px; /* Increase padding for bigger button */
+    min-width: 150px; /* Minimum width for the button */
+  }
